@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="8dp"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <include android:id="@+id/include" layout="@layout/appbar" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etSerachSurah"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_custom_card_menu"
+        android:backgroundTint="@color/silver"
+        android:padding="16dp"
+        android:hint="Search surah"
+        android:drawableLeft="@drawable/ic_search_black_24dp"
+        android:drawableTint="@color/textColor"
+        android:drawablePadding="8dp"
+        android:textSize="14sp"
+        android:textColorHint="@color/textColor"
+        android:textColor="@color/textColor"
+        android:layout_margin="8dp"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvListSurah"
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/item_surah"
+        />
+
+
+</LinearLayout>

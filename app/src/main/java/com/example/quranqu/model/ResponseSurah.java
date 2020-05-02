@@ -1,44 +1,37 @@
 package com.example.quranqu.model;
 
-import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 /**
  * Created by Maulana Ibrahim on 02/May/2020
  * Email maulibrahim19@gmail.com
  */
-public abstract class ResponseSurah {
+public class ResponseSurah {
 
-    @Expose
     @SerializedName("urut")
     private String urut;
-    @Expose
     @SerializedName("type")
     private String type;
-    @Expose
     @SerializedName("rukuk")
     private String rukuk;
-    @Expose
     @SerializedName("nomor")
     private String nomor;
-    @Expose
     @SerializedName("nama")
     private String nama;
-    @Expose
     @SerializedName("keterangan")
     private String keterangan;
-    @Expose
     @SerializedName("ayat")
     private int ayat;
-    @Expose
     @SerializedName("audio")
     private String audio;
-    @Expose
     @SerializedName("asma")
     private String asma;
-    @Expose
     @SerializedName("arti")
     private String arti;
+
+
+    public ResponseSurah() {
+    }
 
     public String getUrut() {
         return urut;
