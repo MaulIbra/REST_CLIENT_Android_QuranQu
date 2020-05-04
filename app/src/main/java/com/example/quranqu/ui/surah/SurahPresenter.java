@@ -41,14 +41,15 @@ public class SurahPresenter implements SurahContract.presenter {
                     @Override
                     public void onNext(List<ResponseSurah> responseSurahs) {
                         for (int i = 0; i < responseSurahs.size();i++){
-                            ResponseSurah surah = new ResponseSurah();
-                            surah.setNomor(responseSurahs.get(i).getNomor());
-                            surah.setNama(responseSurahs.get(i).getNama());
-                            surah.setAsma(responseSurahs.get(i).getAsma());
-                            surah.setAyat(responseSurahs.get(i).getAyat());
-                            surah.setArti(responseSurahs.get(i).getArti());
-                            surah.setType(responseSurahs.get(i).getType());
-                            surahs.add(surah);
+//                            ResponseSurah surah = new ResponseSurah();
+//                            surah.setNomor(responseSurahs.get(i).getNomor());
+//                            surah.setNama(responseSurahs.get(i).getNama());
+//                            surah.setAsma(responseSurahs.get(i).getAsma());
+//                            surah.setAyat(responseSurahs.get(i).getAyat());
+//                            surah.setArti(responseSurahs.get(i).getArti());
+//                            surah.setType(responseSurahs.get(i).getType());
+//                            surah.setAudio(responseSurahs.get(i).getAudio());
+                            surahs.add(responseSurahs.get(i));
                         }
                     }
 

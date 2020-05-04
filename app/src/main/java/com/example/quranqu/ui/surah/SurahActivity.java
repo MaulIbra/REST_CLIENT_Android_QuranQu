@@ -19,6 +19,7 @@ import com.example.quranqu.R;
 import com.example.quranqu.model.ResponseSurah;
 import com.example.quranqu.ui.surah.adapter.SurahAdapter;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -32,6 +33,7 @@ public class SurahActivity extends AppCompatActivity implements SurahContract.vi
     private EditText etSearch;
     private RecyclerView recyclerView;
     private SurahAdapter surahAdapter;
+    private List<ResponseSurah> surahList = new ArrayList<>();
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -55,10 +57,12 @@ public class SurahActivity extends AppCompatActivity implements SurahContract.vi
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setHasFixedSize(true);
+        search();
     }
 
     @Override
     public void onSuccessGetSurah(List<ResponseSurah> responseSurahs) {
+        surahList = responseSurahs;
         surahAdapter = new SurahAdapter(this,responseSurahs);
         recyclerView.setAdapter(surahAdapter);
         surahAdapter.notifyDataSetChanged();
@@ -92,8 +96,20 @@ public class SurahActivity extends AppCompatActivity implements SurahContract.vi
 
             @Override
             public void afterTextChanged(Editable editable) {
-
+                filter(editable.toString());
             }
         });
     }
+
+    private void filter(String toString) {
+        List<ResponseSurah> filterSurah = new ArrayList<>();
+        for(ResponseSurah item : surahList){
+            if(item.getNama().toLowerCase().contains(toString.toLowerCase())){
+                filterSurah.add(item);
+            }
+        }
+        surahAdapter.filterList(filterSurah);
+    }
+
+
 }

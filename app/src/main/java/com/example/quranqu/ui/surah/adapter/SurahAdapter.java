@@ -55,6 +55,7 @@ public class SurahAdapter extends RecyclerView.Adapter<SurahAdapter.ViewHolder> 
                 Intent intent = new Intent(context, AyatActivity.class);
                 intent.putExtra(ConstantValue.nomorSurat, surah.getNomor());
                 intent.putExtra(ConstantValue.urlAudio, surah.getAudio());
+                intent.putExtra(ConstantValue.namaSurat,surah.getNama());
                 context.startActivity(intent);
             }
         });
@@ -63,6 +64,11 @@ public class SurahAdapter extends RecyclerView.Adapter<SurahAdapter.ViewHolder> 
     @Override
     public int getItemCount() {
         return responseSurah.size();
+    }
+
+    public void filterList(List<ResponseSurah> filterSurah) {
+        responseSurah = filterSurah;
+        notifyDataSetChanged();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {

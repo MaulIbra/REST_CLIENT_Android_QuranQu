@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/litemAyat"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:clickable="true"
+    android:weightSum="7"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/tvNomorAyat"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="50dp"
+        android:background="@drawable/ic_frame"
+        android:text="10"
+        android:textSize="12sp"
+        android:textColor="@color/textColor"
+        android:gravity="center_horizontal|center_vertical"
+        />
+
+    <LinearLayout
+        android:layout_weight="6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvAyatArab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textColor"
+            android:text="بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ قُلْ أَعُوذُ بِرَبِّ النَّاسِ"
+            android:fontFamily="@font/poppinsblack"
+            android:textSize="14sp"
+            />
+
+        <TextView
+            android:id="@+id/tvAyatArti"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:textColor="@color/textColor"
+            android:gravity="end"
+            android:fontFamily="@font/poppinsregular"
+            android:textSize="12sp"
+            android:text="lorem ipsum dolor"/>
+
+    </LinearLayout>
+
+</LinearLayout>
