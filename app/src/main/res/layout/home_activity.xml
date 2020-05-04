@@ -52,15 +52,25 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
 
-                    <ImageView
+                    <LinearLayout
                         android:layout_width="0dp"
                         android:layout_weight="1"
-                        android:layout_height="match_parent"
                         android:background="@drawable/ic_custom_card_menu"
                         android:backgroundTint="@color/white"
-                        android:layout_margin="16dp"
-                        android:src="@drawable/ic_compass"
-                        />
+                        android:layout_height="match_parent"
+                        android:gravity="center|center_vertical"
+                        android:layout_margin="16dp">
+
+                        <ImageView
+                            android:id="@+id/ivCompas"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_compass"
+                            />
+
+                    </LinearLayout>
+
+
 
                     <LinearLayout
                         android:layout_width="0dp"
