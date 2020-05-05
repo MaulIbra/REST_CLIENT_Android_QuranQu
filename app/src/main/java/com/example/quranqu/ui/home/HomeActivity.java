@@ -11,6 +11,7 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Parcelable;
 import android.os.ResultReceiver;
 import android.view.View;
 import android.view.animation.Animation;
@@ -29,8 +30,11 @@ import com.example.quranqu.common.ConstantValue;
 import com.example.quranqu.common.DateFormatHelper;
 import com.example.quranqu.model.Items;
 import com.example.quranqu.service.CurrentLocationService;
+import com.example.quranqu.ui.sholat.JadwalSholatActivity;
 import com.example.quranqu.ui.surah.SurahActivity;
 
+import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -41,13 +45,14 @@ import java.util.Objects;
 public class HomeActivity extends AppCompatActivity implements View.OnClickListener, SensorEventListener, HomeContract.view {
 
     private CardView cvMembacaQuran, cvWaktuSholat, cvKumpulanDoa;
-    private TextView tvCity, tvDate, tvTime, tvKetSholat,tvLeftTime,tvMenuju;
+    private TextView tvCity, tvDate, tvTime, tvKetSholat, tvLeftTime, tvMenuju;
     private ImageView ivCompas;
     private float currentDegree = 0f;
     private SensorManager mSensorManager;
     public static final int REQUEST_CODE_LOCATION_PERMISSION = 1;
     private ResultReceiver resultReceiver;
     private DateFormatHelper dateFormatHelper;
+    List<Items> itemsList = new ArrayList<>();
     private static final String TAG = "HomeActivity";
     private HomePresenter presenter;
     private CurrentLocationService currentLocationService;
@@ -59,6 +64,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         onInitView();
         onInit();
         cvMembacaQuran.setOnClickListener(this);
+        cvWaktuSholat.setOnClickListener(this);
     }
 
     private void onInitView() {
@@ -92,6 +98,20 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 i.putExtra(ConstantValue.idActivity, ConstantValue.quran);
                 startActivity(i);
                 break;
+            case R.id.cvWaktuSholat:
+                if (itemsList != null) {
+                    if (itemsList.size() > 0) {
+                        Intent z = new Intent(HomeActivity.this, JadwalSholatActivity.class);
+                        z.putExtra(ConstantValue.SUBUH, itemsList.get(0).getFajr());
+                        z.putExtra(ConstantValue.DZUHUR, itemsList.get(0).getDhuhr());
+                        z.putExtra(ConstantValue.ASHAR, itemsList.get(0).getAsr());
+                        z.putExtra(ConstantValue.MAGHRIB, itemsList.get(0).getMaghrib());
+                        z.putExtra(ConstantValue.ISYA, itemsList.get(0).getIsha());
+                        z.putExtra(ConstantValue.KOTA, tvCity.getText().toString());
+                        z.putExtra(ConstantValue.TANGGAL, tvDate.getText().toString());
+                        startActivity(z);
+                    }
+                }
         }
 
     }
@@ -132,6 +152,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onSuccessGetJadwalSholat(List<Items> items) {
+        itemsList = items;
         presenter.getFindFirstJadwal(items);
     }
 

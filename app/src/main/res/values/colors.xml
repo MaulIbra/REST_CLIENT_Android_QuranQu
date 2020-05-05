@@ -9,6 +9,7 @@
     <color name="green">#60A258</color>
     <color name="orange">#FCBD7F</color>
     <color name="textColor">#646464</color>
+    <color name="textBlack">#343434</color>
     <color name="white">#ffffff</color>
     <color name="silver">#EEEEEE</color>
 </resources>

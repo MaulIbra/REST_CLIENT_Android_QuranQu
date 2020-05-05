@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <include layout="@layout/appbar"/>
+
+    <LinearLayout
+        android:weightSum="2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@color/blue"
+        android:padding="8dp"
+        >
+
+        <TextView
+            android:id="@+id/tvCityJadwal"
+            android:text="Bandung"
+            android:textColor="@color/white"
+            android:fontFamily="@font/poppinsmedium"
+            android:textSize="14sp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tvDateJadwal"
+            android:text="Bandung"
+            android:textColor="@color/white"
+            android:fontFamily="@font/poppinsregular"
+            android:textSize="12sp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:gravity="end"
+            android:drawableRight="@drawable/ic_interface"
+            android:drawablePadding="16dp"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:text="Adzan"
+        android:fontFamily="@font/poppinsmedium"
+        android:textColor="@color/textBlack"
+        android:gravity="end|center_vertical"
+        android:drawableTint="@color/textBlack"
+        android:drawableRight="@drawable/ic_access_alarm_black_24dp"
+        android:drawablePadding="8dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:weightSum="3">
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Subuh"
+            android:layout_gravity="center_vertical"
+            android:textSize="14sp"
+            android:textColor="@color/textColor"
+            android:fontFamily="@font/poppinsmedium"
+            />
+
+        <TextView
+            android:id="@+id/tvSubuh"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Subuh"
+            android:layout_gravity="center_vertical"
+            android:textSize="14sp"
+            android:gravity="end|center_vertical"
+            android:textColor="@color/textColor"
+            android:fontFamily="@font/poppinsregular"
+            />
+
+        <Switch
+            android:id="@+id/swSubuh"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="end"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:weightSum="3">
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Dzuhur"
+            android:layout_gravity="center_vertical"
+            android:textSize="14sp"
+            android:textColor="@color/textColor"
+            android:fontFamily="@font/poppinsmedium"
+            />
+
+        <TextView
+            android:id="@+id/tvDzuhur"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Subuh"
+            android:layout_gravity="center_vertical"
+            android:textSize="14sp"
+            android:gravity="end|center_vertical"
+            android:textColor="@color/textColor"
+            android:fontFamily="@font/poppinsregular"
+            />
+
+        <Switch
+            android:id="@+id/swDzuhur"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="end"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:weightSum="3">
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Ashr"
+            android:layout_gravity="center_vertical"
+            android:textSize="14sp"
+            android:textColor="@color/textColor"
+            android:fontFamily="@font/poppinsmedium"
+            />
+
+        <TextView
+            android:id="@+id/tvAshr"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Subuh"
+            android:layout_gravity="center_vertical"
+            android:textSize="14sp"
+            android:gravity="end|center_vertical"
+            android:textColor="@color/textColor"
+            android:fontFamily="@font/poppinsregular"
+            />
+
+        <Switch
+            android:id="@+id/swAshr"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="end"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:weightSum="3">
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Maghrib"
+            android:layout_gravity="center_vertical"
+            android:textSize="14sp"
+            android:textColor="@color/textColor"
+            android:fontFamily="@font/poppinsmedium"
+            />
+
+        <TextView
+            android:id="@+id/tvMaghrib"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Subuh"
+            android:layout_gravity="center_vertical"
+            android:textSize="14sp"
+            android:gravity="end|center_vertical"
+            android:textColor="@color/textColor"
+            android:fontFamily="@font/poppinsregular"
+            />
+
+        <Switch
+            android:id="@+id/swMaghrib"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="end"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:weightSum="3">
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Isya"
+            android:layout_gravity="center_vertical"
+            android:textSize="14sp"
+            android:textColor="@color/textColor"
+            android:fontFamily="@font/poppinsmedium"
+            />
+
+        <TextView
+            android:id="@+id/tvIsya"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Subuh"
+            android:layout_gravity="center_vertical"
+            android:textSize="14sp"
+            android:gravity="end|center_vertical"
+            android:textColor="@color/textColor"
+            android:fontFamily="@font/poppinsregular"
+            />
+
+        <Switch
+            android:id="@+id/swIsya"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="end"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -20,4 +20,12 @@ public class ConstantValue {
     public static final String DATE_FORMAT = "EEEE, d MMMM yyyy";
     public static final String BASE_URL_QURAN = "https://al-quran-8d642.firebaseio.com/";
     public static final String BASE_URL_ADZAN = "https://muslimsalat.com/";
+    public static final String JADWAL_SHOLAT = "jadwalSholat";
+    public static final String TANGGAL = "tanggal";
+    public static final String KOTA = "kota";
+    public static final String SUBUH = "subuh";
+    public static final String DZUHUR = "dzuhur";
+    public static final String ASHAR = "ashar";
+    public static final String MAGHRIB = "maghrib";
+    public static final String ISYA = "isya";
 }
