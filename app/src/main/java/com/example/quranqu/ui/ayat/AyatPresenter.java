@@ -2,6 +2,7 @@ package com.example.quranqu.ui.ayat;
 
 import com.example.quranqu.apiservice.ApiServiceInterface;
 import com.example.quranqu.apiservice.ApiUtils;
+import com.example.quranqu.common.ConstantValue;
 import com.example.quranqu.model.ResponseAyat;
 
 import java.util.ArrayList;
@@ -17,7 +18,6 @@ import io.reactivex.schedulers.Schedulers;
  * Email maulibrahim19@gmail.com
  */
 public class AyatPresenter implements AyatContract.presenter {
-
     public static final String TAG = "AyatPresenter";
     private List<ResponseAyat> responseAyats = new ArrayList<>();
     private AyatContract.view view;
